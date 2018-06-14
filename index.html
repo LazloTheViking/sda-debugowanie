@@ -31,8 +31,8 @@
 
         function submit() {
             modals[0].open();
-            const knowList = document.getElementsByClassName('know_elements');
-            const unKnowList = document.getElementsByClassName('unknown_elements');
+            const knowList = document.getElementsByClassName('know_elements')[0];
+            const unKnowList = document.getElementsByClassName('unknown_elements')[0];
 
             form.forEach(element => {
                 const options = element.$selectOptions;
