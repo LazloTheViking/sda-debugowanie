@@ -13,13 +13,13 @@
 
     <title>Ankieta</title>
     <script>
-        let form, modal;
+        let form, modals;
         document.addEventListener('DOMContentLoaded', function () {
             let elements = document.querySelectorAll('select');
             form = M.FormSelect.init(elements, {});
 
             elements = document.querySelectorAll('.modal');
-            modal = M.Modal.init(elements, {});
+            modals = M.Modal.init(elements, {});
         });
 
         function createLi(text) {
@@ -30,7 +30,7 @@
         }
 
         function submit() {
-            modal.open();
+            modals[0].open();
             const knowList = document.getElementsByClassName('know_elements');
             const unKnowList = document.getElementsByClassName('unknown_elements');
 
@@ -38,10 +38,11 @@
                 const options = element.$selectOptions;
                 for (let index = 0; index <= options.length; index++) {
                     const select = options[index];
+                    const elemLi = createLi(select.label);
                     if (select.selected) {
-                        knowList.appendChild(createLi(select.label));
+                        knowList.appendChild(elemLi);
                     } else {
-                        unKnowList.appendChild(createLi(select.label));
+                        unKnowList.appendChild(elemLi);
                     }
                 }
             });
