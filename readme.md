@@ -10,4 +10,6 @@ W pliku [index.html](index.html) znajdują się błędy js. Postaraj się je zna
 
 Dodatkowo:
 
-Po ponownym wyświetleniu wyników w popupie pozostają poprzednie wyniki. Jak to naprawić?
+Po ponownym wyświetleniu wyników w popupie pozostają poprzednie wyniki. 
+
+Jak to naprawić?
