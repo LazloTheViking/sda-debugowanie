@@ -30,13 +30,14 @@
         }
 
         function submit() {
-            modals[0].open();
-            const knowList = document.getElementsByClassName('know_elements');
-            const unKnowList = document.getElementsByClassName('unknown_elements');
+            const knowList = document.getElementsByClassName('know_elements')[0];
+            const unKnowList = document.getElementsByClassName('unknown_elements')[0];
+            
+            clearRecentResult(knowList,unKnowList);
 
             form.forEach(element => {
                 const options = element.$selectOptions;
-                for (let index = 0; index <= options.length; index++) {
+                for (let index = 0; index < options.length; index++) {
                     const select = options[index];
                     const elemLi = createLi(select.label);
                     if (select.selected) {
@@ -46,6 +47,12 @@
                     }
                 }
             });
+            modals[0].open();
+        }
+
+        function clearRecentResult (knowList,unKnowList){
+           knowList.innerHTML = ''; 
+           unKnowList.innerHTML = ''; 
         }
     </script>
 </head>
