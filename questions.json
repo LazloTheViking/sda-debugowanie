@@ -1,0 +1,96 @@
+[
+    {
+        "label": "Zmienne",
+        "questions": [
+            {
+                "question": "Czym jest var",
+                "value": 1
+            },
+            {
+                "question": "Czym jest hoisting",
+                "value": 5
+            },
+            {
+                "question": "Roznica miedzy let i const",
+                "value": 1
+            },
+            {
+                "question": "Zasieg zmienych",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "label": "Funkcje",
+        "questions": [
+            {
+                "question": "definicja funkcji",
+                "value": 1
+            },
+            {
+                "question": "funkcje strzalkowe",
+                "value": 2
+            },
+            {
+                "question": "definicja this",
+                "value": 5
+            }
+
+        ]
+    },
+    {
+        "label": "Debugger",
+        "questions": [
+            {
+                "question": "Console log",
+                "value": 1
+            },
+            {
+                "question": "Czym jest debugger",
+                "value": 2
+            },
+            {
+                "question": "Definicja breakpoint",
+                "value": 1
+            }
+        ]
+    },
+    {
+        "label": "Petle",
+        "questions": [
+            {
+                "question": "Petla for",
+                "value": 1
+            },
+            {
+                "question": "Petla while",
+                "value": 1
+            },
+            {
+                "question": "Petla do while",
+                "value": 1
+            },
+            {
+                "question": "Petla for each",
+                "value": 2
+            }
+        ]
+    },
+    {
+        "label": "Obiektowosc",
+        "questions": [
+            {
+                "question": "Dziedzicznie",
+                "value": 1
+            },
+            {
+                "question": "Interfejsy",
+                "value": 1
+            },
+            {
+                "question": "super",
+                "value": 1
+            }
+        ]
+    }
+]

@@ -1,100 +1,3 @@
-const questions = [
-    {
-        label: "Zmienne",
-        questions: [
-            {
-                question: "Czym jest var",
-                value: 1,
-            },
-            {
-                question: "Czym jest hoisting",
-                value: 5,
-            },
-            {
-                question: "Roznica miedzy let i const",
-                value: 1,
-            },
-            {
-                question: "Zasieg zmienych",
-                value: 1,
-            }
-        ]
-    },
-    {
-        label: "Funkcje",
-        questions: [
-            {
-                question: "definicja funkcji",
-                value: 1,
-            },
-            {
-                question: "funkcje strzalkowe",
-                value: 2,
-            },
-            {
-                question: "definicja this",
-                value: 5,
-            },
-
-        ]
-    },
-    {
-        label: "Debugger",
-        questions: [
-            {
-                question: "Console log",
-                value: 1,
-            },
-            {
-                question: "Czym jest debugger",
-                value: 2,
-            },
-            {
-                question: "Definicja breakpoint",
-                value: 1,
-            }
-        ]
-    },
-    {
-        label: "Petle",
-        questions: [
-            {
-                question: "Petla for",
-                value: 1,
-            },
-            {
-                question: "Petla while",
-                value: 1,
-            },
-            {
-                question: "Petla do while",
-                value: 1,
-            },
-            {
-                question: "Petla for each",
-                value: 2,
-            }
-        ]
-    },
-    {
-        label: "Obiektowosc",
-        questions: [
-            {
-                question: "Dziedzicznie",
-                value: 1,
-            },
-            {
-                question: "Interfejsy",
-                value: 1,
-            },
-            {
-                question: "super",
-                value: 1,
-            }
-        ]
-    }
-];
-
 function createQuestionElement(questionData) {
     let optionsTemplate = '';
     questionData.questions.forEach((myOption) => {
@@ -111,22 +14,30 @@ function createQuestionElement(questionData) {
             </div>
         </div>`;
 
-        const element = document.createElement("div");
-        element.innerHTML = template;
-        return element;
+    const element = document.createElement("div");
+    element.innerHTML = template;
+    return element;
 }
 
 let form, modals, elementResult;
 document.addEventListener('DOMContentLoaded', function () {
-    const questionsContainer = document.getElementById('questionsContainer');
-    questions.forEach(questionData => {
-        questionsContainer.appendChild(createQuestionElement(questionData));
-    });
-    let elements = document.querySelectorAll('select');
-    form = M.FormSelect.init(elements, {});
+    fetch('questions.json').then((request) => {
+        request.json().then((questions) => {
+            questions.forEach(questionData => {
+                questionsContainer.appendChild(createQuestionElement(questionData));
 
-    elements = document.querySelectorAll('.modal');
-    modals = M.Modal.init(elements, {});
+                let elements = document.querySelectorAll('select');
+                form = M.FormSelect.init(elements, {});
+            
+                elements = document.querySelectorAll('.modal');
+                modals = M.Modal.init(elements, {});
+            });
+        })
+    });
+
+    const questionsContainer = document.getElementById('questionsContainer');
+
+   
 
     elementResult = document.getElementById("result");
 });
