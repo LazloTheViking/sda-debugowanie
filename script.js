@@ -3,53 +3,96 @@ const questions = [
         label: "Zmienne",
         questions: [
             {
-                question: "Czym jest var?",
+                question: "Czym jest var",
                 value: 1,
             },
             {
-                question: "Czym jest var1?",
-                value: 2,
+                question: "Czym jest hoisting",
+                value: 5,
             },
             {
-                question: "Czym jest var2?",
-                value: 3,
+                question: "Roznica miedzy let i const",
+                value: 1,
+            },
+            {
+                question: "Zasieg zmienych",
+                value: 1,
             }
         ]
     },
     {
-        label: "Zmienne2",
+        label: "Funkcje",
         questions: [
             {
-                question: "Co jest let?",
+                question: "definicja funkcji",
                 value: 1,
             },
             {
-                question: "Co jest let1?",
+                question: "funkcje strzalkowe",
                 value: 2,
             },
             {
-                question: "Co jest let2?",
-                value: 3,
+                question: "definicja this",
+                value: 5,
+            },
+
+        ]
+    },
+    {
+        label: "Debugger",
+        questions: [
+            {
+                question: "Console log",
+                value: 1,
+            },
+            {
+                question: "Czym jest debugger",
+                value: 2,
+            },
+            {
+                question: "Definicja breakpoint",
+                value: 1,
             }
         ]
     },
     {
-        label: "Zmienne3",
+        label: "Petle",
         questions: [
             {
-                question: "Czym jest cons?",
+                question: "Petla for",
                 value: 1,
             },
             {
-                question: "Czym jest cons1?",
-                value: 2,
+                question: "Petla while",
+                value: 1,
             },
             {
-                question: "Czym jest cons2?",
-                value: 3,
+                question: "Petla do while",
+                value: 1,
+            },
+            {
+                question: "Petla for each",
+                value: 2,
             }
         ]
     },
+    {
+        label: "Obiektowosc",
+        questions: [
+            {
+                question: "Dziedzicznie",
+                value: 1,
+            },
+            {
+                question: "Interfejsy",
+                value: 1,
+            },
+            {
+                question: "super",
+                value: 1,
+            }
+        ]
+    }
 ];
 
 function createQuestionElement(questionData) {
